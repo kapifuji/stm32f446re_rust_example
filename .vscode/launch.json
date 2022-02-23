@@ -1,0 +1,27 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug (OpenOCD)",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "Cargo Build (debug)",
+            "runToEntryPoint": "main",
+            "executable": "./target/thumbv7em-none-eabihf/debug/stm32f446re_rust_example",
+            "device": "STM32F446RE",
+            "configFiles": [
+                "openocd.cfg"
+            ],
+            "svdFile": "${workspaceRoot}/.vscode/STM32F446.svd",
+            // 2022/01/11 Cortex-Debugでは自動で投げてくれないので追加
+            "postLaunchCommands": [
+                "monitor arm semihosting enable"
+            ]
+        }
+    ]
+}
