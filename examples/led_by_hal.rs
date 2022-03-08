@@ -29,7 +29,7 @@ use stm32f4xx_hal as hal;
 // pac は stm32f4::stm32f446 と同義
 // もし、割り込みテーブル定義が欲しい場合は pac::interrupt とすればよい
 // prelude::* は doc 参照（hover 説明すれば出てくる）
-use crate::hal::{pac, prelude::*};
+use hal::{pac, prelude::*};
 
 #[entry]
 fn main() -> ! {
