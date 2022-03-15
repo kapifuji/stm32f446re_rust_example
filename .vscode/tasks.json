@@ -19,6 +19,23 @@
             }
         },
         {
+            "label": "Cargo Build examples (debug)",
+            "type": "process",
+            "command": "cargo",
+            "args": [
+                "build",
+                "--example",
+                "${fileBasenameNoExtension}"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "Cargo Build (release)",
             "type": "process",
             "command": "cargo",
