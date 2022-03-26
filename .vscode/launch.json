@@ -29,7 +29,7 @@
             "name": "Debug examples (OpenOCD)",
             "servertype": "openocd",
             "cwd": "${workspaceRoot}",
-            "preLaunchTask": "Cargo Build (debug)",
+            "preLaunchTask": "Cargo Build examples (debug)",
             "runToEntryPoint": "main",
             "executable": "./target/thumbv7em-none-eabihf/debug/examples/${fileBasenameNoExtension}",
             "device": "STM32F446RE",
